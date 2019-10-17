@@ -14,13 +14,13 @@ MainComponent::MainComponent()
     setSize(800, 600);
 
 #if JUCE_LINUX
-  /*
-  Configure PIGPIO clock for I2S audio
-  gpioCfgClock(macro, PWM/PCM, deprecated param)
-  macro: 5
-  PWM/PCM: 0:PWM, 1:PCM
-  pigpio with using I2S audio. You have to set PWM mode before call gpioInitialise()
-  */
+    /*
+    Configure PIGPIO clock for I2S audio
+    gpioCfgClock(macro, PWM/PCM, deprecated param)
+    macro: 5
+    PWM/PCM: 0:PWM, 1:PCM
+    pigpio with using I2S audio. You have to set PWM mode before call gpioInitialise()
+    */
     gpioCfgClock(5, 0, 0);
 
     //gpioinit
@@ -110,12 +110,12 @@ void MainComponent::resized()
 void MainComponent::showAudioSettings()
 {
     AudioDeviceSelectorComponent audioSettingsComp(deviceManager,
-                                                   0, 2, //InputChannels: min/max
-                                                   0, 2, //OutputChannels: min/max
-                                                   false,  //Show MIDI input options
-                                                   false,  //Show MIDI output selector
-                                                   false,  //Stereo pair
-                                                   false   //Hide advanced option with button
+                                                   0, 2,  //InputChannels: min/max
+                                                   0, 2,  //OutputChannels: min/max
+                                                   false, //Show MIDI input options
+                                                   false, //Show MIDI output selector
+                                                   false, //Stereo pair
+                                                   false  //Hide advanced option with button
     );
 
     audioSettingsComp.setSize(450, 250);
