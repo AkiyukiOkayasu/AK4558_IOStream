@@ -48,6 +48,5 @@ private:
 	static constexpr unsigned int i2cPort = 1;//Raspberry Pi I2C Port 1(0 or 1)
 	static constexpr unsigned int i2cFlag = 0;
 
-
     JUCE_DECLARE_NON_COPYABLE_WITH_LEAK_DETECTOR (MainComponent)
 };
